@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
     'bootstrap4',
-    'social_django'
+    'social_django',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +132,8 @@ AUTHENTICATION_BACKENDS = [
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend', #Apenas para manter a atenticação padrao do django
 ]
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
