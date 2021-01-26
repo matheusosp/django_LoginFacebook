@@ -135,5 +135,22 @@ AUTHENTICATION_BACKENDS = [
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'logout'
+LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
+
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
+# Configurações para Facebook212837167157742
+SOCIAL_AUTH_FACEBOOK_KEY = 'app id'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'app password'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
+
